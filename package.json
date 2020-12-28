@@ -1,0 +1,17 @@
+{
+  "name": "download-inflator",
+  "version": "1.0.0",
+  "description": "Artificially inflate the download count of any npm package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "download",
+    "download-count",
+    "exploit"
+  ],
+  "author": "caltrop",
+  "license": "GPL-3.0"
+}
