@@ -72,7 +72,7 @@ var InstallInflator = require('@caltrop/install-count-inflator');
 var inflator = new InstallInflator({
     name: 'install-count-inflator',
     version: '1.0.0',
-	scope: 'caltrop'
+    scope: 'caltrop'
 });
 ```
 
