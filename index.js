@@ -15,15 +15,15 @@ function isValid(s) {
  */
 
 /**
- * @class DownloadInflator
+ * @class InstallInflator
  * @description Inflates the download count of an npm package
  * @public
  * @property {number} timesPinged
  * @property {function(number):undefined} onPing
  * @param {options} options 
  */
-function DownloadInflator(options = {}) {
-    if(!DownloadInflator[Symbol.hasInstance](this)) return new DownloadInflator(options);
+function InstallInflator(options = {}) {
+    if(!InstallInflator[Symbol.hasInstance](this)) return new InstallInflator(options);
     if(!isValid(options.name)) throw TypeError('Package name must be a String!');
     var delay = Number(options.delay);
     if(typeof options.delay !== 'undefined' && (delay !== delay || delay === Infinity || delay <= 0)) throw new TypeError('Ping delay must be a valid finite number above 0');
@@ -55,7 +55,7 @@ function DownloadInflator(options = {}) {
  * @param {number} [delay] Optionally, how long to wait before stopping in milliseconds 
  * @returns {void}
  */
-DownloadInflator.prototype.stop = function stop(delay) {
+InstallInflator.prototype.stop = function stop(delay) {
     var del = Number(delay);
     if(typeof delay !== 'undefined' && (del !== del || del === Infinity || del <= 0)) throw new TypeError('Stop delay must be a valid finite number above 0');
     var self = this;
@@ -69,4 +69,4 @@ DownloadInflator.prototype.stop = function stop(delay) {
         end();
     }
 };
-module.exports = DownloadInflator;
+module.exports = InstallInflator;

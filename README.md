@@ -1,22 +1,22 @@
-# npm-download-inflator
+# npm-install-count-inflator
 Artificially increase the download-counter of any npm package!
 
 Read more about this [here](https://caltrop.dev/why-you-should-not-trust-npm-download-count).
 
 ## Install
 
-`$ npm install --save download-inflator`
+`$ npm install --save install-count-inflator`
 
 ## Usage
 
-Requiring `download-inflator` will return a class. Upon instantiation it will increment the download count of the 
+Requiring `install-count-inflator` will return a class. Upon instantiation it will increment the download count of the 
 specified package every second.
 
 ```js
-var DownloadInflator = require('download-inflator');
+var InstallInflator = require('install-count-inflator');
 
-var inflator = new DownloadInflator({
-	name: 'download-inflator'
+var inflator = new InstallInflator({
+    name: 'install-count-inflator',
 });
 ```
 
@@ -35,10 +35,10 @@ A function to be called whenever the download count gets increased.
 Default: `function() {}`
 
 ```js
-var DownloadInflator = require('download-inflator');
+var InstallInflator = require('install-count-inflator');
 
-var inflator = new DownloadInflator({
-    name: 'download-inflator',
+var inflator = new InstallInflator({
+    name: 'install-count-inflator',
     onPing: function(timesPinged) {
 		console.log('The download count has been incremented ' + timesPinged + ' times!');
 	}
@@ -67,10 +67,10 @@ The scope of the npm package if it is scoped
 Default: `null`
 
 ```js
-var DownloadInflator = require('download-inflator');
+var InstallInflator = require('@caltrop/install-count-inflator');
 
-var inflator = new DownloadInflator({
-    name: 'download-inflator',
+var inflator = new InstallInflator({
+    name: 'install-count-inflator',
     version: '1.0.0',
 	scope: 'caltrop'
 });
@@ -84,10 +84,10 @@ Stops the interval, optionally takes an amount of time in milliseconds to wait b
 
 The example below increases the download count of this package once every 250 milliseconds and automatically stops after 10 seconds:
 ```js
-var DownloadInflator = require('download-inflator');
+var InstallInflator = require('install-count-inflator');
 
-var inflator = new DownloadInflator({
-    name: 'download-inflator',
+var inflator = new InstallInflator({
+    name: 'install-count-inflator',
     delay: 250
 });
 

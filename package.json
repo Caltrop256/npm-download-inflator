@@ -1,17 +1,18 @@
 {
-  "name": "download-inflator",
+  "name": "install-count-inflator",
   "version": "1.0.0",
   "description": "Artificially inflate the download count of any npm package",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "npm",
-    "download",
-    "download-count",
-    "exploit"
-  ],
-  "author": "caltrop",
-  "license": "GPL-3.0"
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Caltrop256/npm-download-inflator.git"
+  },
+
+  "author": "caltrop <caltropuwu@gmail.com>",
+  "license": "GPL-3.0",
+  "homepage": "https://caltrop.dev/why-you-should-not-trust-npm-download-count"
 }
